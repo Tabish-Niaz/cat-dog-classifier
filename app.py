@@ -4,6 +4,15 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 
 st.set_page_config(page_title="Cat vs Dog Predictor", page_icon="🐾")
+# Streamlit ke default Header (Fork/GitHub) aur Footer ko hide karne ka CSS
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 st.title("🐱 vs 🐶 Cat & Dog Classifier")
 
 # Saved Model ko Load karna
